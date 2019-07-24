@@ -117,6 +117,41 @@
       solutionObject8.name = 'solution8';
       scene.add(solutionObject8);
 
+      solutionObject9 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject9.position.set(4000,6000,5000);
+      solutionObject9.name = 'solution9';
+      scene.add(solutionObject9);
+
+      solutionObject10 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject10.position.set(7000,6000,5000);
+      solutionObject10.name = 'solution10';
+      scene.add(solutionObject10);
+
+      solutionObject11 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject11.position.set(10000,6000,5000);
+      solutionObject11.name = 'solution11';
+      scene.add(solutionObject11);
+
+      solutionObject12 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject12.position.set(-2000,6000,5000);
+      solutionObject12.name = 'solution12';
+      scene.add(solutionObject12);
+
+      solutionObject13 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject13.position.set(-5000,6000,5000);
+      solutionObject13.name = 'solution13';
+      scene.add(solutionObject13);
+
+      solutionObject14 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject14.position.set(-8000,6000,5000)
+      solutionObject14.name = 'solution14';
+      scene.add(solutionObject14);
+
+      /*solutionObject15 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject15.position.set(1000,6000,5000);
+      solutionObject15.name = 'solution15';
+      scene.add(solutionObject15);*/
+
       meshBox5.callback = function () {
         console.log(this.name);
       }
@@ -184,20 +219,23 @@ projector.load('models/tv_controller/scene.gltf', function(gltf1)
     function objectCLickHandler2()
     {
       solutionObject1.material.color.setHex(0xff0000);
+      solutionObject5.material.color.setHex(0xff0000);
+      solutionObject11.material.color.setHex(0xff0000);
       requestAnimationFrame(animate);
       alert('You have recieved a clue');
     }
 
     function objectCLickHandler3()
     {
-      solutionObject2.material.color.setHex(0x008000);
+      solutionObject3.material.color.setHex(0x008000);
       requestAnimationFrame(animate);
       alert('you have recieved a clue');
     }
 
     function objectCLickHandler4()
     {
-      solutionObject3.material.color.setHex(0x0000ff);
+      solutionObject12.material.color.setHex(0x0000ff);
+      solutionObject7.material.color.setHex(0x0000ff);
       requestAnimationFrame(animate);
       alert('you have recieved a clue');
     }
