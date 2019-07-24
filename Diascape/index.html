@@ -77,21 +77,45 @@
       meshBox4.name = 'frame2';
       scene.add(meshBox4);
       
-      solutionObject1 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({transparent: true,opacity:0.5 }));
-      solutionObject1.position.set(1000,6000,-6000);
+      solutionObject1 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject1.position.set(1000,6000,-5000);
       solutionObject1.name = 'solution1';
       scene.add(solutionObject1);
 
-      solutionObject2 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({transparent: true,opacity:0.5 }));
-      solutionObject2.position.set(1000,6000,6000);
+      solutionObject2 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject2.position.set(1000,6000,5000);
       solutionObject2.name = 'solution2';
       scene.add(solutionObject2);
 
-      solutionObject3 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({transparent: true,opacity:0.5 }));
-      solutionObject3.position.set(-6000,6000,-6000);
+      solutionObject3 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject3.position.set(-8000,6000,-5000);
       solutionObject3.name = 'solution3';
       scene.add(solutionObject3);
 
+      solutionObject4 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject4.position.set(4000,6000,-5000);
+      solutionObject4.name = 'solution4';
+      scene.add(solutionObject4);
+
+      solutionObject5 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject5.position.set(7000,6000,-5000);
+      solutionObject5.name = 'solution5';
+      scene.add(solutionObject5);
+
+      solutionObject6 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject6.position.set(10000,6000,-5000);
+      solutionObject6.name = 'solution6';
+      scene.add(solutionObject6);
+
+      solutionObject7 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject7.position.set(-2000,6000,-5000);
+      solutionObject7.name = 'solution7';
+      scene.add(solutionObject7);
+
+      solutionObject8 = new THREE.Mesh(new THREE.BoxBufferGeometry(500, 250, 500), new THREE.MeshStandardMaterial({color: 'white', transparent: true,opacity:1 }));
+      solutionObject8.position.set(-5000,6000,-5000);
+      solutionObject8.name = 'solution8';
+      scene.add(solutionObject8);
 
       meshBox5.callback = function () {
         console.log(this.name);
@@ -104,19 +128,18 @@
 var projector = new THREE.GLTFLoader;
 projector.load('models/projector/scene.gltf', function(gltf)
 {
-  // model = gltf.scene;
-  // console.log(model);
-  // model.name = 'projector';
-  // model.scale.set(20,45,12);
-  // model.position.set(12300,0.5,5200);
-  // model.rotation.y = 3*(Math.PI/2);
-  gltf.scene.traverse( function ( child ) {
-  scene.add(child);});
+   model = gltf.scene;
+   console.log(model);
+   model.name = 'projector';
+   model.scale.set(20,45,12);
+   model.position.set(12300,0.5,5200);
+   model.rotation.y = 3*(Math.PI/2);
+   scene.add(model);
 });
 
 //remote
 var projector = new THREE.GLTFLoader;
-projector.load('models/tv_controller_-_low_poly/scene.gltf', function(gltf1)
+projector.load('models/tv_controller/scene.gltf', function(gltf1)
 {
   let model = gltf1.scene;
   console.log(model);
