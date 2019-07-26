@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=UTF-8 />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+  <video id="video" loop crossOrigin="anonymous" webkit-playsinline style="display:none">
+    <source src="video/GOT.ogv" type='video/ogg; codecs="theora, vorbis"'>
+    <source src="video/GOT.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+  </video>
+  <script src="js/three.min.js"></script>
+  <script src="js/orbitControls.js"></script>
+  <script src="js/GLTFLoader.js"></script>
+  <script>
+    let scene, camera, renderer, light, videoBox2;
+    function init() {
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 45, 500000);
+      camera.position.set(-900, -200, -900);
+
+      light = new THREE.AmbientLight('white', 2);
+      light.position.set(-1000, -300, -1000);
+      scene.add(light);
+
+
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+      let controls = new THREE.OrbitControls(camera);
+      controls.addEventListener('change', renderer);
+      controls.minDistance = 500;
+      controls.maxDistance = 1500;
+
+      let materialArray = [];
+      let texture_ft = new THREE.TextureLoader().load('room2_ft2.jpg');
+      let texture_bk = new THREE.TextureLoader().load('room2_bk2.jpg');
+      let texture_up = new THREE.TextureLoader().load('room2_up2.jpg');
+      let texture_dn = new THREE.TextureLoader().load('room2_dn2.jpg');
+      let texture_rt = new THREE.TextureLoader().load('room2_rt2.jpg');
+      let texture_lf = new THREE.TextureLoader().load('room2_lf2.jpg');
+
+      materialArray.push(new THREE.MeshBasicMaterial({ map: texture_ft }));
+      materialArray.push(new THREE.MeshBasicMaterial({ map: texture_bk }));
+      materialArray.push(new THREE.MeshBasicMaterial({ map: texture_up }));
+      materialArray.push(new THREE.MeshBasicMaterial({ map: texture_dn }));
+      materialArray.push(new THREE.MeshBasicMaterial({ map: texture_rt }));
+      materialArray.push(new THREE.MeshBasicMaterial({ map: texture_lf }));
+
+      for (let i = 0; i < 6; i++)
+        materialArray[i].side = THREE.BackSide;
+      let skyboxGeo = new THREE.BoxGeometry(50000, 17000, 35000);
+      let skybox = new THREE.Mesh(skyboxGeo, materialArray);
+      scene.add(skybox);
+
+
+      //video texture
+      var video = document.getElementById('video');
+    
+      videoTexture = new THREE.Texture(video);
+      videoTexture.minFilter = THREE.LinearFilter;
+      videoTexture.magFilter = THREE.LinearFilter;
+
+      //video object
+      videoBox2 = new THREE.Mesh(new THREE.BoxBufferGeometry(50, 700, 700), new THREE.MeshStandardMaterial({ map: videoTexture, overdraw: true }));
+      videoBox2.position.set(20000, -2000, 300);
+      videoBox2.scale.set(0, 8, 15);
+      videoBox2.name = 'video';
+      scene.add(videoBox2);
+
+
+      render();
+
+
+
+      var table = new THREE.GLTFLoader;
+      table.load('models/conf_table/scene.gltf', function (gltf) {
+        let model = gltf.scene;
+        console.log(model);
+        model.name = 'table';
+        model.scale.set(200, 50, 200);
+        model.position.set(0, -5000, 0);
+        model.rotation.y = Math.PI / 2;
+
+        scene.add(model);
+      });
+
+      var pot = new THREE.GLTFLoader;
+      pot.load('models/pot/scene.gltf', function (gltf1) {
+        let model = gltf1.scene;
+        console.log(model);
+        model.name = 'table';
+        model.scale.set(10, 10, 10);
+        model.position.set(0, -4000, 100);
+
+        scene.add(model);
+      });
+
+      
+
+      animate();
+    }
+    function animate() {
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    }
+
+    //render
+    function render() {
+
+      requestAnimationFrame(render);
+      if (video.readyState === video.HAVE_ENOUGH_DATA) {
+        if (videoTexture)
+          videoTexture.needsUpdate = true;
+      }
+      // calling again render function
+      renderer.render(scene, camera);
+
+    }
+    function VideoHandler1() {
+      video.play();
+    }
+    init();
+
+    var raycaster = new THREE.Raycaster();
+    var mouse = new THREE.Vector2();
+
+    // Handle all clicks to determine of a three.js object was clicked and trigger its callback
+    function onDocumentMouseDown(event) {
+      event.preventDefault();
+
+      mouse.x = (event.clientX / renderer.domElement.clientWidth) * 2 - 1;
+      mouse.y = - (event.clientY / renderer.domElement.clientHeight) * 2 + 1;
+
+      raycaster.setFromCamera(mouse, camera);
+
+      meshObjects = [videoBox2]; // three.js objects with click handlers we are interested in
+
+      intersects = raycaster.intersectObjects(meshObjects);
+
+      if (intersects.length > 0) {
+        //console.log(intersects[0].object.name == 'watch');
+
+        switch (intersects[0].object.name) {
+          case 'video':
+            {
+              VideoHandler1();
+              break;
+            }
+
+        }
+
+
+      }
+
+    }
+    document.addEventListener('mousedown', onDocumentMouseDown, true);
+
+    //window resize
+    function onWindowResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.updateProjectionMatrix();
+    }
+    window.addEventListener('resize', onWindowResize);
+  </script>
+</body>
+
+</html>
