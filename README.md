@@ -2,7 +2,7 @@
   <br>
   <a><img src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/spring-framework.png" alt="spring boot"></a>
   <br>
-  DiaScape - Thr Escape Room
+  DiaScape - The Escape Room
   <br>
 </h1>
 
@@ -87,3 +87,14 @@ Following Technologies are used in the development of this project :
   <li><a href="https://github.com/shobhitsharma380/">Shobhit Sharma</a></li>
 </ul
   
+## References ##
+
+<ul>
+  <li> Rendering : <a href="www.threejs.org"></a> </li>
+  <li> Objects : <a href="www.sketchfab.com"></a> </li>
+  <li> Hosting : <a href="www.netlify.com"></a> </li>
+</ul>
+
+## Source Code ##
+
+<a href="https://github.com/DiaScape/DiaScape"></a>
