@@ -77,7 +77,6 @@ Following Technologies are used in the development of this project :
 ## User Interface ##
 
 ## Contributors ##
-
 <ul>
   <li><a href="https://github.com/anoop-diaspark/">Anoop Jain</a></li>
   <li><a href="https://github.com/AyushiMalviya/">Ayushi Malviya</a></li>
