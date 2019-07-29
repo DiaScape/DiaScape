@@ -62,5 +62,28 @@
 
 ## Schema Design ##
 
+## Technologies ##
 
+Following Technologies are used in the development of this project :
+
+<ul> 
+  <li> THREE.js </li>
+  <li> JavaScript  </li>
+  <li> HTML </li>
+  <li> CSS </li>
+  <li> Netlify </li>
+</ul>
+
+## User Interface ##
+
+## Contributors ##
+
+<ul>
+  <li><a href="https://github.com/anoop-diaspark/">Anoop Jain</a></li>
+  <li><a href="https://github.com/AyushiMalviya/">Ayushi Malviya</a></li>
+  <li><a href="https://github.com/DeveshWebdunia/">Devesh Sant</a></li>
+  <li><a href="https://github.com/murtazalokhandwala7424/">Murtaza Lokhandwala</a></li>
+  <li><a href="https://github.com/nguptadiaspark243/">Neha Gupta </a></li>
+  <li><a href="https://github.com/shobhitsharma380/">Shobhit Sharma</a></li>
+</ul
   
