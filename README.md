@@ -48,4 +48,19 @@
   <li> Sound Card </li>
   <li> Speakers or Headphones </li>
 </ul>
+
+<h3> Browsers </h3>
+<ul> 
+  <li> Google Chrome 36+ </li>
+  <li> Microsoft Edge  </li>
+  <li> Internet Explorer </li>
+  <li> Mozilla Firefox </li>
+  <li> Safari </li>
+</ul>
+
+## Applications ##
+
+## Schema Design ##
+
+
   
