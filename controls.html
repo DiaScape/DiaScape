@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    .bg {
+      /* The image used */
+      background-image: url("controlsimage.jpg");
+
+
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+
+    }
+
+    /* carosels */
+    .container {
+      margin-top: 100px;
+
+    }
+
+    #buttonstyle {
+      height: 50px;
+      width: 150px;
+      position: fixed;
+      margin-left: 590px;
+      justify-content: center;
+      background-image: url("button.png");
+    }
+    #ct-text
+    {
+
+      text-align: center;
+      font-family: cursive solid;
+      letter-spacing: 3px;
+      font-style: oblique;
+      color:gray;
+      font-size-adjust: 20px;
+      font-weight: bolder;
+      text-shadow:2px 2px #fff;
+
+    }
+    #ct-subtext
+    {
+      letter-spacing: 3px;
+      font-family: Cambria, Cochin, 'Georgia', Times, Times New Roman, serif;
+      text-align: justify;
+      color:white;  
+    }
+
+    .button {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 4px;
+  position: relative;
+  background-color:transparent;
+  box-shadow: 0 5px 15px black ;
+  border: none;
+  color: #fff;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-top: 70px;
+  margin-left: 570px;
+  
+
+  
+ 
+}
+
+.button:hover {
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #1abc9c;
+  color: #000;
+}
+
+.button:after {
+  content: "";
+  background: green;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.button:focus { outline:0; }
+#buttonstyling
+{
+  position:static;
+}
+
+
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue, 0 0 80px blue;
+  }
+}
+</style>
+  </style>
+</head>
+
+<body class="bg">
+
+
+  <div class="container">
+
+    <div id="myCarousel" class="carousel slide" data-interval="false">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" id="slider">
+
+        <div class="item active">
+        
+          <h1 id="ct-text" class="glow" >About DiaScape</h1>
+          <p>
+            <h2 id="ct-subtext">Diascape:Escape Room as the name suggest revolves around querying around plans and puzzles to escape from a room.
+              The game involves brain exercise of the player at mathematical and analytical level.
+              The game forces the player into deep thinking as it involves certain levels of permutations and
+              combinations.
+              The player is trapped into the room and he needs to fathom several puzzles in order to procure a pass code
+              which allow the player to exit from the room.
+              There are several levels which the player needs to clear to win the game.
+           </h2>
+          </p>
+          <div class="carousel-caption">
+
+          </div>
+        </div>
+
+        <div class="item">
+          <h1 id="ct-text" class="glow">Instructions</h1>
+          <p>
+            <h2 id="ct-subtext"> Welcome to the Escape Room
+                <ul>You will need to progress through 3 levels in order to get out of building.</ul>
+                <ul>Each room will present a new challenge.</ul>
+                <ul>The passcodes for each room can be alphanumeric. </ul>  
+            </h2>
+          </p>
+
+
+          <div class="carousel-caption">
+
+
+          </div>
+        </div>
+
+        <div class="item">
+          <h1 id="ct-text" class="glow">Controls</h1>
+          <p>
+            <h2 id="ct-subtext">All you need to use is mouse to change camera angle and mouse click to find the hidden clues in the room.</h2>
+          </p>
+
+
+          <div class="carousel-caption">
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  
+  <div id="buttonstyling">
+<button class="button" onclick="location.href='room1/FirstRoom.html';"> Lets play!</button>
+</div>
+
+
+
+
+
+</body>
+
+</html>

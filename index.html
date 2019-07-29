@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <link href="styler.css" rel="stylesheet" type="css"/> 
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+.button {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 4px;
+  position: relative;
+  background-color:transparent;
+  box-shadow: 0 5px 15px black ;
+  border: none;
+  color: #fff;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+ 
+  border-radius: 4px;
+  margin-top: 250px;
+  margin-left: 170px;
+  
+ 
+}
+
+.button:hover {
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #1abc9c;
+  color: #000;
+}
+
+.button:after {
+  content: "";
+  background: #1abc9c;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.button:focus { outline:0; }
+#main
+    {
+
+    background-image: url("background.jpg");
+    background-position: center;
+   background-size: cover;
+
+}
+#key
+{
+float: left;    
+
+}
+
+/*logo styling*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+.title {
+	font-family: "Montserrat";
+
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	letter-spacing: 1px;
+   position: relative;
+   float: left;
+   margin: 0 0 0 auto;
+}
+
+h1 {
+	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	text-transform: uppercase;
+	font-size: 80px;
+	line-height: .75;
+	margin: 10px 0;
+}
+/* styling my button */
+
+.white-mode {
+	text-decoration: none;
+	padding: 7px 10px;
+	background-color: #122;
+	border-radius: 3px;
+	color: #FFF;
+	transition: .35s ease-in-out;
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+	font-family: "Montserrat";
+}
+
+.white-mode:hover {
+	background-color: #FFF;
+	color: #122;
+}
+.audiobutton
+{
+  float :right;
+  
+} 
+</style>
+</head>
+
+<body id="main">
+  
+
+<button class="button" onclick="location.href='controls.html';"> Lets play!</button>
+<div class="title">
+        <h1>diascape</h1>  
+       </div>
+
+       <script>
+          function play(){
+           var audio = document.getElementById("audio");
+           audio.play();
+          }
+   function pause(){
+           var audio = document.getElementById("audio");
+           audio.pause();
+          }
+   </script>
+   <div class="audiobutton">
+
+   <div class="col-lg-12 col-sm-12 col-md-12">
+   <button type="button" class="btn btn-info btn-lg" onclick="play()"><span class="glyphicon glyphicon-play" style="color:green"></span> </button>
+   <button type="button"  class="btn btn-info btn-lg" onclick="pause()"><span class="glyphicon glyphicon-pause" ></span> </button>
+   </div>
+   <audio id="audio" src="Escape Room.mp3" ></audio>
+  </div>
+</body>
+</html>  
+
+
+

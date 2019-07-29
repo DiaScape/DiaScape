@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-image: url("lvl_up.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        img {
+            margin-top:
+
+        }
+
+
+        .glow {
+            font-size: 80px;
+            color: #fff;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+            margin-top: 250px;
+        }
+
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red;
+            }
+
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
+            }
+        }
+
+
+
+.button {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 4px;
+  position: relative;
+  background-color:transparent;
+  box-shadow: 0 5px 15px black ;
+  border: none;
+  color: #fff;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+ 
+  border-radius: 4px;
+  margin-top: 150px;
+  margin-left: 1070px;
+  
+ 
+}
+
+.button:hover {
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #1abc9c;
+  color: #000;
+}
+
+.button:after {
+  content: "";
+  background: #1abc9c;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.button:focus { outline:0; }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 class="glow">LEVEL UP!</h1>
+    <audio autoplay>
+        <source src="level_up.mp3">
+    </audio>
+    
+<button class="button" onclick="location.href='file:///H:/companyproject/front/controls.html#';">next</button>
+</body>
+</html>s
