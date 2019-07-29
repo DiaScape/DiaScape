@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a><img src="https://github.com/khandelwal-arpit/springboot-starterkit/blob/master/docs/images/spring-framework.png" alt="spring boot"></a>
+  <a><img src="https://github.com/DiaScape/DiaScape/blob/master/logo.png" alt="spring boot"></a>
   <br>
   DiaScape - The Escape Room
   <br>
