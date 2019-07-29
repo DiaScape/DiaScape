@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">Production ready starterkit for Spring Boot applications.</h4>
+<h4 align="center">Escape Room Game.</h4>
 
 
 ## Table of Contents ##
