@@ -11,15 +11,15 @@
 
 ## Table of Contents ##
 <ul>
-  <li> [Game Description](#Game-Description)</li>
-  <li>[Requirement Specification](#Requirement-Specification)</li>
-  <li> [Application](#Application)</li>
-  <li> [Design Schema](#Design-Schema)</li>
-  <li> [Technologies](#Technologies)</li>
-  <li> [User Interface](#User-Interface)</li>
-  <li> [Contributors](#Contributors)</li>
-  <li> [References](#References)</li>
-  <li> [Source Code Link](#Source-Code-Link)</li>
+  <li> Game Description </li>
+  <li> Requirement Specification </li>
+  <li> Application </li>
+  <li> Design Schema </li>
+  <li> Technologies </li>
+  <li> User Interface </li>
+  <li> Contributors </li>
+  <li> References </li>
+  <li> Source Code Link </li>
 </ul>
 
 ## Game Description ##
